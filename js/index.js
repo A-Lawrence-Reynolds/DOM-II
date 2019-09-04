@@ -4,7 +4,7 @@ imgScale.addEventListener('mouseover', () => {
     imgScale.style.transform = "scale(1.3)";
     imgScale.style.transition = 'all 2.5s';
 });
-const scaleDown = document.querySelectorAll('.intro').forEach(item => {
+const imgScaleDown = document.querySelectorAll('.intro').forEach(item => {
     item.addEventListener('mouseleave', event => {
         item.style.transform = "scale(1)";
         item.style.transition = 'all 0.5s';
@@ -30,29 +30,31 @@ backgroundColorKeyUp.addEventListener('keyup', (e) => {
     backgroundColor.style.background = "#AFB5A6";
 })
 
-const blueWater = document.querySelectorAll('top-img').forEach(item => {
+const blueWater = document.querySelectorAll('img').forEach(item => {
     item.addEventListener('click', event => {
-        item.src = 'https://unsplash.com/photos/sLAk1guBG90';
+        item.src = 'img/shifaaz-shamoon-sLAk1guBG90-unsplash.jpg';
         item.alt = "blue water";
     })
 })
-// const color = document.querySelector('container home');
-// color.addEventListener('click', (e) => {
-//  color.style.background ="#59ffd5";
-// })
 
-
-
-
-
-
-
-
-
-
-
-const link = document.querySelector('.nav')
-link.addEventListener('click', e => {
-    console.log("link is clicked");
-    e.preventDefault();
+const fontColor = document.querySelector('body');
+fontColor.addEventListener('click', function (event) {
+    console.log('clicked');
+    fontColor.style.color = "#177B78";
+    fontColor.style.transition = 'color 1.5s';
+    event.stopPropagation();
 });
+
+
+const scaleUp = document.querySelectorAll('.destination').forEach(item => {
+    item.addEventListener('mouseenter', event => {
+        item.style.transform = "scale(1.2)";
+        item.style.transition = 'all 0.5s';
+    })
+})
+const scaleDown = document.querySelectorAll('.destination').forEach(item => {
+    item.addEventListener('mouseleave', event => {
+        item.style.transform = "scale(1)";
+        item.style.transition = 'all 1.5s';
+    })
+})
