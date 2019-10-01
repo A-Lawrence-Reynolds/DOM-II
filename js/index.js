@@ -59,3 +59,11 @@ fontColor.addEventListener("click", function(event) {
   fontColor.style.transition = "color 1.5s";
   event.stopPropagation();
 });
+const footer = document.querySelector(".footer");
+
+footer.addEventListener("mouseenter", () => {
+  footer.style.backgroundColor = "#FF00FF";
+});
+footer.addEventListener("mouseleave", () => {
+  footer.style.backgroundColor = "#663399";
+});
